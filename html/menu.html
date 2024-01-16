@@ -1,0 +1,202 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+        }
+        .wrapper{
+            height: 860px;
+            width: 1089px;
+            background-color: rgb(237, 136, 12);
+            margin: 0px auto;
+        }
+        header{
+            height: 10%;
+            background-color: aqua;
+            text-align: center;
+            font-weight: bold;
+            font-size: 30px;
+        }
+        nav{
+            height: 5%;
+            background-color: #fff;
+        }
+        nav ul { 
+            text-decoration: none;
+           
+            width: 100%;
+            height: 100%;
+        }
+        nav ul li {
+            list-style-type: none;
+            display: inline-block;
+            width: 100px;
+            /* margin-top: 9px; */
+            text-align: center;
+            height: 100%;
+           
+        }
+        nav ul li a { 
+            text-decoration: none;
+           color:  black;
+           font-size: 20px;
+           font-weight: bold;
+           font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        nav ul li:hover{
+          background-color:bisque ;
+          
+        }
+     ul.drop{
+    position: absolute;
+        height: 40px;
+        width: 10px;
+        top: 129px;
+    left: 104px;
+    z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+     }
+     ul.drop li { 
+        background-color: rgb(183, 53, 53);
+     }
+     nav ul li:hover ul.drop{
+        opacity: 1;
+        z-index: 1;
+        visibility: visible;
+     }
+     ul.sub{
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        z-index: 0;
+    opacity: 0;
+    visibility: hidden;
+     }
+      ul.drop li:hover ul.sub{
+        opacity: 1;
+        z-index: 1;visibility: visible;
+      
+     }
+     ul.drop li {
+        background-color: rgb(97, 91, 158);
+     }
+     ul.sub2{
+        position: absolute;
+        left: 100px;
+        top: 50px;
+        z-index: 0;
+    opacity: 0;
+     }
+      ul.sub li:hover ul.sub2{
+        opacity: 1;
+        z-index: 2;
+      
+     }
+main{
+    height: 75%;
+    width: 100%;
+
+}
+aside{
+    height: 40%;
+    width: 40%;
+    margin: 0 auto 0;
+    box-shadow:rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;;
+}
+
+
+footer{
+    height: 10%;
+    width: 100%;
+    background-color: black;
+}
+h3{
+    padding-top: 20px;
+    text-align: center;
+}
+table{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px
+}
+.login{
+    position: absolute;
+    top: 300px;
+    left: 668px;
+    width: 100px;
+    height: 30px;
+    border-radius: 50px;
+}
+.login a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+}
+.login:hover {
+ background-color: cyan;
+ color: #fff;
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+       <header>
+        <div class="span"><span>Le Phan Quoc Dai</span></div>
+       </header>
+       <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a>
+                <ul class="drop">
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a>
+                        <ul class="sub">
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a>
+                                <ul class="sub2">
+                                    <li><a href="#">7</a></li>
+                                    <li><a href="#">8</a></li>
+                                    <li><a href="#">9</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li><a href="#">3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Contact </a></li>
+            <li><a href="#">Help</a></li>
+        </ul>
+       </nav>
+       <main>
+        <aside>
+            <h3>LOGIN</h3>
+            <form action="#">
+               <table>
+                <tr>
+                    <td> <label for="#" id="user"> User : </label></td>
+                    <td>    <input type="text" id="user "></td>
+                </tr>
+                <tr>
+                    <td> <label for="#" id="pass"> Password : </label></td>
+                    <td>    <input type="password" id="pass "></td>
+                </tr>
+               <button class="login"><a href="#">Login</a></button>
+               </table>
+            </form>
+        </aside>
+        <section></section>
+       </main>
+   <footer>
+
+   </footer>
+    </div>
+</body>
+</html>

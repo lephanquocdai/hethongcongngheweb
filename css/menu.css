@@ -1,0 +1,40 @@
+ ul {
+    background-color: bisque;
+    overflow: hidden;
+ }
+ li a { 
+    text-decoration: none;
+ list-style-type: none ;
+ color: black;
+ font-size: 20px;
+ font-weight: bold;
+
+
+}
+li { 
+    display: inline-block;
+    margin:  10px ;
+    background-color: darksalmon;
+    border-radius: 50px ;
+    width: 70px;
+    text-align: center;
+}
+li a:hover { 
+        color: chocolate;
+}
+li:hover{
+    background-color: #ffff;
+}
+
+ul.drop{ 
+    display: grid;
+    position: absolute;
+    opacity: 0;
+    left: 100px;
+    top: 50px;
+    background-color:#ffff ;
+}
+ ul.drop:hover{
+    opacity: 1;
+    color: chocolate;
+}
